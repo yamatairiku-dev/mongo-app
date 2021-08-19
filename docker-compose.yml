@@ -1,14 +1,14 @@
 version: '3'
 services:
   mongo:
-    image: mongo
+    image: mongo:5.0.2
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: passwd
 
   mongo-express:
-    image: mongo-express
+    image: mongo-express:1.0.0-alpha.4
     restart: always
     ports:
       - 8081:8081
@@ -20,7 +20,7 @@ services:
   node:
     depends_on:
       - mongo
-    image: yamatairiku0dev/mongo-app
+    image: yamatairiku0dev/mongo-app:practice
     container_name: mongo-app
     restart: always
     ports: 
