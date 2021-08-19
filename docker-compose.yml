@@ -24,7 +24,7 @@ services:
     container_name: mongo-app
     restart: always
     ports: 
-      - 3000:3000
+      - 8080:3000
     environment: 
       NODE_CONFIG_MONGODB_URL: mongodb://root:passwd@mongo:27017/recipe_db?authSource=admin
     tty: true
